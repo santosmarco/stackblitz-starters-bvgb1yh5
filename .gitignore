@@ -47,3 +47,5 @@ yarn-error.log*
 # idea files
 .idea
 .trigger
+temp_auto_push.bat
+temp_interactive_push.bat

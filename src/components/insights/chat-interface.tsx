@@ -339,10 +339,10 @@ export function ChatInterface({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: 1,
-                  y: 0,
+                  y: 48,
                 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="flex flex-col items-center justify-center gap-4"
+                className="relative flex flex-col items-center justify-center gap-4"
               >
                 <motion.div
                   animate={{

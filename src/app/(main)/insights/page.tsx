@@ -49,7 +49,7 @@ export default function InsightsPage() {
     isFetchingNextPage,
   } = api.videos.list.useInfiniteQuery(
     {
-      limit: 12,
+      limit: 36,
       options: {
         tags:
           user?.is_admin && (!profile || user.id === profile.id)
@@ -133,17 +133,17 @@ export default function InsightsPage() {
 
   if (userLoading || frameworksLoading || chatLoading || !userId) {
     return (
-        <div className="mt-20 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center gap-4"
-          >
-            <MessageCircleMoreIcon className="h-10 w-10 animate-pulse text-primary" />
-            <p className="text-sm text-muted-foreground">Preparing chat...</p>
-          </motion.div>
-        </div>
+      <div className="mt-20 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center gap-4"
+        >
+          <MessageCircleMoreIcon className="h-10 w-10 animate-pulse text-primary" />
+          <p className="text-sm text-muted-foreground">Preparing chat...</p>
+        </motion.div>
+      </div>
     );
   }
 
